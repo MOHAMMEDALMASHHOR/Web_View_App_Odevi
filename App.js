@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { 
-  StyleSheet, 
-  View, 
-  TextInput, 
-  TouchableOpacity, 
+import {
+  StyleSheet,
+  View,
+  TextInput,
+  TouchableOpacity,
   Text,
   KeyboardAvoidingView,
   Platform,
@@ -15,7 +15,7 @@ export default function App() {
   const [urlInput, setUrlInput] = useState('https://www.ifixit.com');
   const [currentUrl, setCurrentUrl] = useState('https://www.ifixit.com');
   const [commandInput, setCommandInput] = useState('');
-  
+
   const webviewRef = useRef(null);
 
   const handleLoadUrl = () => {
@@ -33,14 +33,8 @@ export default function App() {
       window.__pageAgentInjected = true;
 
       const script = document.createElement('script');
-      // Adding .js extension since CDN returns 404 without it, but also keeping the base name as a fallback
-      script.src = 'https://cdn.jsdelivr.net/npm/page-agent@1.5.2/dist/iife/page-agent.js';
-      script.onerror = function() {
-        console.error("Failed to load page-agent with .js, trying original url");
-        const script2 = document.createElement('script');
-        script2.src = 'https://cdn.jsdelivr.net/npm/page-agent@1.5.2/dist/iife/page-agent';
-        document.head.appendChild(script2);
-      };
+      script.src = 'https://cdn.jsdelivr.net/npm/page-agent@1.5.4/dist/iife/page-agent.demo.js';
+      script.crossOrigin = 'anonymous';
       document.head.appendChild(script);
       
       // Global listener for safety fallback
@@ -62,7 +56,7 @@ export default function App() {
 
   const handleSendCommand = () => {
     if (!commandInput.trim()) return;
-    
+
     // Attempt several possible generic initialization patterns based on typical library exports
     const sanitizedCommand = commandInput.replace(/"/g, '\\"').replace(/\n/g, ' ');
     const jsToInject = `
@@ -97,14 +91,14 @@ export default function App() {
       }
       true;
     `;
-    
+
     webviewRef.current?.injectJavaScript(jsToInject);
     setCommandInput('');
   };
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <KeyboardAvoidingView 
+      <KeyboardAvoidingView
         style={styles.container}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
