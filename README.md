@@ -16,6 +16,7 @@ This phase upgrades the basic WebView by injecting the official **Alibaba Page-A
 4. Scan the QR code with the Expo Go app on your phone.
 
 ## Submission Links
-* **Download APK:** [EAS_BUILD_LINK_PENDING]
+* **Download APK:** https://expo.dev/accounts/mohammedalmashhor/projects/MyApp/builds/8a375d84-20e1-4e1d-ab07-518d632b9071
 * **Demo Video:** https://youtu.be/45gavMg5zWk?si=gTPr7M1Oe9TqSNUX
-* **User Feedback Report:** [Insert Google Docs Link Here]
+* **User Feedback Report:** https://docs.google.com/document/d/1fIuxFbDmwRLBil1YpDuHy3t-WnuRy39L4IV2H2f0Zks/edit?usp=sharing
+* **LinkedIn Post:** https://www.linkedin.com/feed/update/urn:li:activity:7440339339978498048/?originTrackingId=um7KVWpPQRL%2B%2FMmfvj0v2Q%3D%3D
