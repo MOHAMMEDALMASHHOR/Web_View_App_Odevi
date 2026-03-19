@@ -1,37 +1,21 @@
-# Away Mission: AI Page-Agent WebView
+# Web View App Ödevi: AI Page-Agent Integration
 
-This project is a React Native mobile application built with Expo that implements a web-based GUI agent inside a native WebView.
+## Project Overview
+This project is a React Native mobile application built as an "Away Mission" assignment. It demonstrates how to integrate web content inside a mobile app and inject AI capabilities directly into the loaded webpages.
 
-## Description
+### Phase 1: Base Camp (React Native + WebView)
+A simple, functional mobile interface built with Expo and `react-native-webview`. It allows users to input any URL (defaults to `https://www.ifixit.com`) and renders the target website seamlessly within the app.
 
-The project is structured into two main phases:
+### Phase 2: AI Integration (Alibaba Page-Agent)
+This phase upgrades the basic WebView by injecting the official **Alibaba Page-Agent** (`page-agent.demo.js`) into the webpage's DOM. Through a natural language command bar in the app, users can send text prompts to the embedded AI, which then interacts with the webpage directly (clicking, searching, scrolling, etc.).
 
-*   **Phase 1 (Base Camp WebView):** A custom React Native interface that includes a URL input bar and a `WebView` component. It defaults to loading `https://www.ifixit.com` and allows users to browse any standard website within the mobile app.
-*   **Phase 2 (AI Integration using page-agent):** Enhances the WebView by injecting the [page-agent](https://cdn.jsdelivr.net/npm/page-agent@1.5.2/dist/iife/page-agent.js) script into the loaded web page. A secondary command bar is provided to send natural language instructions to the AI agent, allowing it to interact directly with the webpage's DOM.
+## Setup & Installation
+1. Clone the repository: `git clone https://github.com/MOHAMMEDALMASHHOR/Web_View_App_Odevi.git`
+2. Install dependencies: `npm install`
+3. Start the Expo server: `npx expo start`
+4. Scan the QR code with the Expo Go app on your phone.
 
-## Setup Instructions
-
-To run this project locally, ensure you have Node.js and the Expo CLI installed. 
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/MOHAMMEDALMASHHOR/Web_View_App_Odevi.git
-    cd Web_View_App_Odevi
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-3.  **Run the application:**
-    ```bash
-    npx expo start
-    ```
-    Scan the QR code printed in the terminal using the Expo Go application on your mobile device.
-
-## Classroom Deliverables
-
-Below are the required submission materials for this assignment:
-
-*   **APK Download Link:** [Insert APK Link Here]
-*   **YouTube Demonstration Video:** [Insert YouTube Link Here]
-*   **Kullanıcı Geri Bildirim Raporu (User Feedback Report):** [Insert Report Link Here]
+## Submission Links
+* **Download APK:** [EAS_BUILD_LINK_PENDING]
+* **Demo Video:** https://youtu.be/45gavMg5zWk?si=gTPr7M1Oe9TqSNUX
+* **User Feedback Report:** [Insert Google Docs Link Here]
